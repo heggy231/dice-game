@@ -1,0 +1,30 @@
+{
+  "name": "dice-game",
+  "version": "1.0.0",
+  "description": "testing my React abilities",
+  "author": "jasmo2",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "eslint": "^3.19.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint-config-rallycoding": "^3.2.0",
+    "jest": "^19.0.2"
+  },
+  "scripts": {
+    "dev": "node_modules/webpack/bin/webpack.js --color --watch",
+    "test": "jest"
+  },
+  "license": "ISC"
+}
