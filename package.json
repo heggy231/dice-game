@@ -22,7 +22,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "eslint-config-rallycoding": "^3.2.0",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "webpack-dev-server": "^2.4.2"
   },
   "jest": {
     "transformIgnorePatterns": [
@@ -30,7 +31,7 @@
     ]
   },
   "scripts": {
-    "dev": "node_modules/webpack/bin/webpack.js --color --watch",
+    "dev": "webpack-dev-server --color --watch",
     "test": "jest"
   },
   "license": "ISC"
