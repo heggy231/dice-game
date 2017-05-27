@@ -1,1 +1,2 @@
 export const TOGGLE_PLAYER = 'TOGGLE_PLAYER';
+export const UPDATE_SCORE = 'UPDATE_SCORE';
