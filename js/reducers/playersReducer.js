@@ -1,6 +1,7 @@
 import { UPDATE_SCORE } from '../constants';
 
 const INITIAL_STATE = [
+  { id: 0, currentScore: 0, totalScore: 0 },
   { id: 1, currentScore: 0, totalScore: 0 }
 ];
 

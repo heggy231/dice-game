@@ -5,7 +5,7 @@ const leftOrRight = id => (
 );
 const Player = ({ id, totalScore, currentScore, active }) => (
     <div className={`player-${id}-panel ${active}`}>
-        <div className='player-name' id={`name-${id}`}>Player {id}</div>
+        <div className='player-name' id={`name-${id}`}>Player {id + 1}</div>
         <div 
             id={`score-${id}`}
             className={`player-score player-score-${leftOrRight(id)}`} 
