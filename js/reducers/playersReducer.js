@@ -1,15 +1,15 @@
-import { UPDATE_SCORE, UPDATE_GLOBAL_SCORE } from '../constants';
+import { RESET_PLAYERS, UPDATE_SCORE, UPDATE_GLOBAL_SCORE } from '../constants';
 
 const INITIAL_STATE = [
   { id: 0, currentScore: 0, totalScore: 0 },
   { id: 1, currentScore: 0, totalScore: 0 }
 ];
 
-const getCurrentPlayer = (id, state) => {
-    return state.find((player) => (
+const getCurrentPlayer = (id, state) => (
+  state.find((player) => (
       player.id === id
-    ));
-};
+    ))
+);
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -25,10 +25,15 @@ export default (state = INITIAL_STATE, action) => {
       const { id } = action.payload;
       const currentPlayer = getCurrentPlayer(id, state);
 
-      currentPlayer.totalScore = currentPlayer.currentScore;
+      currentPlayer.totalScore += currentPlayer.currentScore;
       currentPlayer.currentScore = 0;
       return Object.assign([], state, currentPlayer);
     }
+    case RESET_PLAYERS: 
+      return Object.assign([], [
+        { id: 0, currentScore: 0, totalScore: 0 },
+        { id: 1, currentScore: 0, totalScore: 0 }
+      ]);
     default:
       return state;
   }

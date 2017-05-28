@@ -2,14 +2,13 @@ import React from 'react';
 import Players from '../containers/players';
 import RollDiceButton from '../containers/roleDiceButton';
 import HoldButton from '../containers/holdButton';
+import NewGameButton from '../containers/newGameButton';
 
 const DiceGame = ({ dice }) => (
   <div className='wrapper clearfix'>
     <Players />
     
-    <button className='btn-new'>
-        <i className='ion-ios-plus-outline' />New game
-    </button>
+    <NewGameButton />
     <RollDiceButton />
     <HoldButton />
     
