@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import DiceGame from './components/diceGame';
+import DiceGame from './containers/diceGame';
 import reducers from './reducers/index';
 
 

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import shouldUpdate from 'recompose/shouldUpdate';
 
 const leftOrRight = id => (
     id === 0 ? 'right' : 'left'
@@ -30,6 +31,9 @@ Player.proptypes = {
     totalScore: PropTypes.number.isRequired,
 };
 
+const checkPropsChange = (props, nextProps) => 
+    (nextProps.currentScore !== props.currentScore 
+    || nextProps.totalScore !== props.totalScore);
+    
 
-
-export default Player;
+export default shouldUpdate(checkPropsChange)(Player);
