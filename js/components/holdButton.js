@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RoleDiceButton = ({ togglePlayer }) => (  
+const RoleDiceButton = ({ togglePlayer, addScoreToGlobal, rounds }) => (  
     <button 
-        onClick={() => togglePlayer()}
+        onClick={() => { togglePlayer(); addScoreToGlobal(rounds.player); }}
         className='btn-hold'
     >
         <i className='ion-ios-download-outline' /> Hold
