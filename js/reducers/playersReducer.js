@@ -7,8 +7,16 @@ const INITIAL_STATE = [
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case UPDATE_SCORE:
-      return Object.assign([], state, action.payload);
+    case UPDATE_SCORE: {
+      const { id, currentScore } = action.payload;
+      const currentPlayer = state.find((player) => (
+        player.id === id
+      ));
+
+      currentPlayer.currentScore = currentScore !== 1 ? 
+                                   currentPlayer.currentScore + currentScore : 0;
+      return Object.assign([], state, currentPlayer);
+    }
     default:
       return state;
   }
