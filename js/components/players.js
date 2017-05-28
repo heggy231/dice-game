@@ -1,15 +1,15 @@
 import React from 'react';
 import Player from '../components/player';
 
-const Players = ({ players }) => (  
+const Players = ({ players, rounds }) => (  
     <div> 
-        { players.map(({ id, totalScore, currentScore, active }) =>( 
+        { players.map(({ id, totalScore, currentScore }) => ( 
             <Player  
                 key={id} 
                 id={id} 
                 totalScore={totalScore} 
                 currentScore={currentScore} 
-                active={active} 
+                active={id === rounds.player ? 'active' : null} 
             /> 
         ) 
         ) } 

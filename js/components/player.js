@@ -33,7 +33,8 @@ Player.proptypes = {
 
 const checkPropsChange = (props, nextProps) => 
     (nextProps.currentScore !== props.currentScore 
-    || nextProps.totalScore !== props.totalScore);
+    || nextProps.totalScore !== props.totalScore
+    || nextProps.active !== props.active);
     
 
 export default shouldUpdate(checkPropsChange)(Player);
