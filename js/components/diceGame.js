@@ -1,6 +1,7 @@
 import React from 'react';
 import Players from '../containers/players';
 import RollDiceButton from '../containers/roleDiceButton';
+import HoldButton from '../containers/holdButton';
 
 const DiceGame = ({ dice }) => (
   <div className='wrapper clearfix'>
@@ -10,9 +11,7 @@ const DiceGame = ({ dice }) => (
         <i className='ion-ios-plus-outline' />New game
     </button>
     <RollDiceButton />
-    <button className='btn-hold'>
-        <i className='ion-ios-download-outline' /> Hold
-    </button>
+    <HoldButton />
     
     <img src={`images/huge-dice${dice.number}.png`} alt='Dice' className='dice' />
 </div>
