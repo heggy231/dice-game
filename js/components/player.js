@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'; 
 import shouldUpdate from 'recompose/shouldUpdate';
 
 const leftOrRight = id => (
@@ -24,8 +25,8 @@ const Player = ({ id, totalScore, currentScore, active, winner }) => {
             </div>
         </div>
     </div>
-);
-}
+    );
+};
 
 Player.proptypes = {
     id: PropTypes.number.isRequired,

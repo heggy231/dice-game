@@ -1,3 +1,6 @@
+/* eslint comma-dangle: ['error',
+ {'functions': 'never', "arrays": "only-multiline", "objects":
+ "only-multiline"} ] */
 const path = require('path');
 const webpack = require('webpack');
 
@@ -41,12 +44,19 @@ module.exports = {
 	},
 
 	plugins: [
-		new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
-		new webpack.NamedModulesPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('production')
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true,
+			compress: { warnings: false }
+		})
 	],
 	output: {
 		path: ROOT_DIR,
-		filename: 'bundle.js'
+		filename: 'app.js'
 	}
 };
 
