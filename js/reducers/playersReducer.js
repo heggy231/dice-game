@@ -16,7 +16,7 @@ export default (state = INITIAL_STATE, action) => {
     case UPDATE_SCORE: {
       const { id, currentScore } = action.payload;
       const currentPlayer = getCurrentPlayer(id, state);
-    
+      // if (!!currentScore){ return state } //eslint-disable-line
       currentPlayer.currentScore = currentScore !== 1 ? 
                                    currentPlayer.currentScore + currentScore : 0;
       return Object.assign([], state, currentPlayer);
@@ -24,7 +24,6 @@ export default (state = INITIAL_STATE, action) => {
     case UPDATE_GLOBAL_SCORE: {
       const { id } = action.payload;
       const currentPlayer = getCurrentPlayer(id, state);
-
       currentPlayer.totalScore += currentPlayer.currentScore;
       currentPlayer.currentScore = 0;
       return Object.assign([], state, currentPlayer);

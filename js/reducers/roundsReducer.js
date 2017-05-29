@@ -7,7 +7,7 @@ export default (state = INITIAL_STATE, action) => {
     case TOGGLE_PLAYER:
       return { ...state, player: state.player === 0 ? 1 : 0 };
     case RESET_ROUNDS:
-      return { ...state, player: INITIAL_STATE };
+      return { ...state, player: 0 };
     default:
       return state;
   }
