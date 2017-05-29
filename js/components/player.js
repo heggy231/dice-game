@@ -25,8 +25,8 @@ const Player = ({ id, totalScore, currentScore, active, winner }) => {
             </div>
         </div>
     </div>
-);
-}
+    );
+};
 
 Player.proptypes = {
     id: PropTypes.number.isRequired,
