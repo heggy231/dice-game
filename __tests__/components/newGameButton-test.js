@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import sinon from 'sinon';
+import { shallow } from 'enzyme'; //eslint-disable-line
 import NewGameButton from '../../js/components/newGameButton';
 
 const NewGameButtonComponent = () => {
@@ -21,12 +20,5 @@ describe('NewGameButton', () => {
     it('renders the new game button', () => {
         const RenderedNewGameButton = NewGameButtonComponent();
         expect(RenderedNewGameButton.find('.btn-new')).toHaveLength(1);
-    });
-
-    it('clicks the button', () => {
-        const ButtonClick = sinon.spy();
-        const ButtonComponent = NewGameButtonComponent();
-        ButtonComponent.find('button').simulate('click');
-        expect(ButtonClick.calledOnce).toEqual(true);
     });
 });
