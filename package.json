@@ -32,6 +32,7 @@
     ]
   },
   "scripts": {
+    "prod": "webpack --config ./webpack.prod.config.js --progress --colors",
     "dev": "webpack-dev-server --color --watch",
     "test": "jest"
   },
