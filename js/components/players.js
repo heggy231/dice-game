@@ -18,7 +18,7 @@ const Players = ({ players, rounds, winnerPlayer }) => (
 );
 
 const setWinner = ({ totalScore, winner, winnerPlayer }) => {
-    if (totalScore >= 4 && winner == null) {
+    if (totalScore >= 100 && winner == null) {
         winnerPlayer();
         return 'winner';
     }
