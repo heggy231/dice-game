@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ PropTypes } from 'react';
 import Players from '../containers/players';
 import RollDiceButton from '../containers/roleDiceButton';
 import HoldButton from '../containers/holdButton';
@@ -15,5 +15,10 @@ const DiceGame = ({ dice }) => (
     <img src={`images/huge-dice${dice.number}.png`} alt='Dice' className='dice' />
 </div>
 );
+
+DiceGame.defaultProps = {
+    dice: PropTypes.object.isRequired,
+    rounds: PropTypes.object.isRequired
+};
 
 export default DiceGame;

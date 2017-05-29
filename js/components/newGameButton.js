@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const NewGameButton = ({ players, resetPlayers, resetRounds }) => (  
     <button 
@@ -11,11 +11,16 @@ const NewGameButton = ({ players, resetPlayers, resetRounds }) => (
 const cerosCheck = (players, resetPlayers, resetRounds) => {
     for (const player of players) {
         if (player.totalScore !== 0 || player.currentScore !== 0) {
-            console.info(`player.totalScore: ${player.totalScore}; currentScore: ${player.currentScore}`);
             resetPlayers();
             resetRounds();
         }
     }
+};
+
+NewGameButton.defaultProps = {
+    players: PropTypes.array.isRequired,
+    resetPlayers: PropTypes.func.isRequired,
+    resetRounds: PropTypes.func.isRequired,
 };
 
 export default NewGameButton;
