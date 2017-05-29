@@ -1,7 +1,7 @@
 import React from 'react';
 import Player from '../components/player';
 
-const Players = ({ players, rounds }) => (  
+const Players = ({ players, rounds, winnerPlayer }) => (  
     <div> 
         { players.map(({ id, totalScore, currentScore }) => ( 
             <Player  
@@ -10,11 +10,20 @@ const Players = ({ players, rounds }) => (
                 totalScore={totalScore} 
                 currentScore={currentScore} 
                 active={id === rounds.player ? 'active' : null} 
+                winner={setWinner({ totalScore, winner: rounds.winner, winnerPlayer })}
             /> 
         ) 
         ) } 
     </div> 
 );
+
+const setWinner = ({ totalScore, winner, winnerPlayer }) => {
+    if (totalScore >= 4 && winner == null) {
+        winnerPlayer();
+        return 'winner';
+    }
+    return null;
+};
 
 Players.defaultProps = {
     players: [

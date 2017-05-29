@@ -5,3 +5,5 @@ export const UPDATE_DICE = 'UPDATE_DICE';
 export const RESET_ROUNDS = 'RESET_ROUNDS';
 export const RESET_PLAYERS = 'RESET_PLAYERS';
 export const ROLE_DICE = 'ROLE_DICE';
+export const WINNER_PLAYER = 'WINNER_PLAYER';
+

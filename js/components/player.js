@@ -4,8 +4,9 @@ import shouldUpdate from 'recompose/shouldUpdate';
 const leftOrRight = id => (
     id === 0 ? 'right' : 'left'
 );
-const Player = ({ id, totalScore, currentScore, active }) => (
-    <div className={`player-${id}-panel ${active}`}>
+const Player = ({ id, totalScore, currentScore, active, winner }) => {
+    return (
+    <div className={`player-${id}-panel ${active} ${winner}`}>
         <div className='player-name' id={`name-${id}`}>Player {id + 1}</div>
         <div 
             id={`score-${id}`}
@@ -24,6 +25,7 @@ const Player = ({ id, totalScore, currentScore, active }) => (
         </div>
     </div>
 );
+}
 
 Player.proptypes = {
     id: PropTypes.number.isRequired,

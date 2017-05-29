@@ -12,7 +12,7 @@ class DiceGameContainer extends Component {
             if (dice.number === 1) {
                 updateScore(rounds.player, 1);
                 togglePlayer();
-            } else {
+            } else if (nextProps.rounds.winner == null) {
                 updateScore(rounds.player, dice.number);
             }
         }
