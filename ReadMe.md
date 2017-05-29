@@ -1,5 +1,5 @@
-#Project develop by *Jaime Molina*
-
+# Project develop by *Jaime Molina*
+#### _Project URL:_ **[jasmo2.github.io/dice-game](https://jasmo2.github.io/dice-game/)**
 
 ## GAME RULES:
 - The game has 2 players, playing in rounds
