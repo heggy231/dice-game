@@ -16,10 +16,11 @@ const DiceGame = ({ dice, rounds }) => (
       ]
     }
     
-    <img src={`images/huge-dice${dice.number}.png`} alt='Dice' className='dice' />
+    <img src={`images/huge-dice${diceNumber(dice.number)}.png`} alt='Dice' className='dice' />
 </div>
 );
 
+const diceNumber = number => (number === 0 ? 1 : number);
 DiceGame.defaultProps = {
     dice: PropTypes.object.isRequired,
     rounds: PropTypes.object.isRequired

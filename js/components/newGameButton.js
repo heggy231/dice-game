@@ -1,18 +1,19 @@
 import React, { PropTypes } from 'react';
 
-const NewGameButton = ({ players, resetPlayers, resetRounds }) => (  
+const NewGameButton = (props) => (  
     <button 
         className='btn-new'
-        onClick={() => { cerosCheck(players, resetPlayers, resetRounds); }}
+        onClick={() => { cerosCheck(props); }}
     >
         <i className='ion-ios-plus-outline' />New game
     </button>
 );
-const cerosCheck = (players, resetPlayers, resetRounds) => {
+const cerosCheck = ({ players, resetPlayers, resetRounds, resetDice }) => {
     for (const player of players) {
         if (player.totalScore !== 0 || player.currentScore !== 0) {
             resetPlayers();
             resetRounds();
+            resetDice();
         }
     }
 };
