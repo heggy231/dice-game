@@ -1,4 +1,5 @@
-import React,{ PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Players from '../containers/players';
 import RollDiceButton from '../containers/roleDiceButton';
 import HoldButton from '../containers/holdButton';
