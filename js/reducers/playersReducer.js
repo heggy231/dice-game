@@ -19,20 +19,21 @@ export default (state = INITIAL_STATE, action) => {
       // if (!!currentScore){ return state } //eslint-disable-line
       currentPlayer.currentScore = currentScore !== 1 ? 
                                    currentPlayer.currentScore + currentScore : 0;
-      return Object.assign([], state, currentPlayer);
+      return state.map((player) => (
+        player.id === action.id ? currentPlayer : player
+      ));
     }
     case UPDATE_GLOBAL_SCORE: {
       const { id } = action.payload;
       const currentPlayer = getCurrentPlayer(id, state);
       currentPlayer.totalScore += currentPlayer.currentScore;
       currentPlayer.currentScore = 0;
-      return Object.assign([], state, currentPlayer);
+      return state.map((player) => (
+        player.id === action.id ? currentPlayer : player
+      ));
     }
     case RESET_PLAYERS: 
-      return Object.assign([], [
-        { id: 0, currentScore: 0, totalScore: 0 },
-        { id: 1, currentScore: 0, totalScore: 0 }
-      ]);
+      return INITIAL_STATE;
     default:
       return state;
   }
