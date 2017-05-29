@@ -1,6 +1,8 @@
 # Project develop by *Jaime Molina*
 #### _Project URL:_ **[jasmo2.github.io/dice-game](https://jasmo2.github.io/dice-game/)**
 
+should change to *gh-pages* branch to see production webpack configuration
+
 ## GAME RULES:
 - The game has 2 players, playing in rounds
 - In each turn, a player rolls a dice as many times as he whishes.
