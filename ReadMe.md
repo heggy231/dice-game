@@ -1,7 +1,8 @@
 # Project develop by *Jaime Molina*
 #### _Project URL:_ **[jasmo2.github.io/dice-game](https://jasmo2.github.io/dice-game/)**
 
-should change to *gh-pages* branch to see production webpack configuration
+- should change to *gh-pages* branch to see production webpack configuration
+- the project handles a user web refresh using localstorage;
 
 ## GAME RULES:
 - The game has 2 players, playing in rounds
