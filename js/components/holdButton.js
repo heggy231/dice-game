@@ -12,7 +12,8 @@ const RoleDiceButton = ({ togglePlayer, addScoreToGlobal, rounds }) => (
 
 RoleDiceButton.defaultProps = {
     togglePlayer: PropTypes.func.isRequired,
-    addScoreToGlobal: PropTypes.func.isRequired
+    addScoreToGlobal: PropTypes.func.isRequired,
+    rounds: PropTypes.object.isRequired
 };
 
 export default RoleDiceButton;
