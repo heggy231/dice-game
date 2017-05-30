@@ -8,9 +8,9 @@ const NewGameButtonComponent = () => {
             { id: 0, currentScore: 0, totalScore: 0 },
             { id: 1, currentScore: 0, totalScore: 0 }
         ],
-        resetPlayers: () => {},
-        resetRounds: () => {},
-        resetDice: () => {}
+        resetPlayers: jest.fn(),
+        resetRounds: jest.fn(),
+        resetDice: jest.fn()
     };
     return shallow(<NewGameButton {...props} />);
 };
