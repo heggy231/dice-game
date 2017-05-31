@@ -14,6 +14,8 @@ if (devBuild) {
 }
 
 module.exports = {
+	devtool: 'cheap-module-source-map',
+
 	entry: {
 		app: [
 		
@@ -46,7 +48,7 @@ module.exports = {
 	],
 	output: {
 		path: ROOT_DIR,
-		filename: 'bundle.js'
+		filename: 'app.js'
 	}
 };
 
